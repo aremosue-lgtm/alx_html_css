@@ -1,1 +1,109 @@
+/* =======================================
+   1. RESET & GLOBAL STYLES
+======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* =======================================
+   2. CONTAINER
+======================================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =======================================
+   3. HEADER
+======================================= */
+.header {
+    background-color: #fff; /* Adjust per Figma */
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0; /* subtle divider */
+}
+
+.header .logo img {
+    width: 150px; /* adjust per Figma */
+    height: auto;
+}
+
+.header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #333; /* adjust per Figma */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header .nav a:hover {
+    color: #007BFF; /* highlight color from Figma */
+}
+
+/* Flex layout for header */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =======================================
+   4. HERO / BANNER
+======================================= */
+.hero {
+    background-color: #f9f9f9; /* adjust per Figma */
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111; /* per Figma */
+}
+
+.hero .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero .btn-primary {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #007BFF; /* primary color from Figma */
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn-primary:hover {
+    background-color: #0056b3; /* darker on hover */
+}
+
+/* Optional hero images wrapper (if using images) */
+.hero-images {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
