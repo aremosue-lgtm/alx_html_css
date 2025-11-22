@@ -1,1 +1,29 @@
+/* Task 1: Positioning with Flexbox */
 
+/* BODY is a flex container with 3 items: header, main, footer */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* MAIN is a flex container with 2 items: article and aside */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* allow main to expand automatically */
+}
+
+/* ARTICLE takes 2/3 of the space */
+article {
+    flex: 2;
+    overflow-y: auto; /* scroll if content is long */
+    padding: 20px;
+}
+
+/* ASIDE takes 1/3 of the space */
+aside {
+    flex: 1;
+    overflow-y: auto; /* scroll independently */
+    padding: 20px;
+}
