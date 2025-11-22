@@ -107,3 +107,28 @@ body {
     justify-content: center;
     gap: 20px;
 }
+
+/* =======================================
+   5. QUOTES SECTION
+======================================= */
+.quote {
+    background-color: #fdfdfd; /* adjust based on Figma */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.quote blockquote {
+    font-size: 1.5rem; /* adjust per Figma */
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+
+.quote cite {
+    display: block;
+    font-size: 1rem;
+    color: #777;
+    font-weight: 600;
+}
