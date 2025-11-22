@@ -284,3 +284,36 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
+/* =======================================
+   9. FOOTER SECTION
+======================================= */
+.footer {
+    background-color: #111; /* adjust per Figma */
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer .footer-brand img {
+    width: 120px; /* adjust per Figma */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 1rem;
+    color: #aaa; /* slightly lighter text for contrast */
+}
+
+/* Optional footer links if any are added */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #007BFF; /* match primary color from Figma */
+}
