@@ -1,0 +1,169 @@
+/* ------------------------------
+   RESET
+------------------------------ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ------------------------------
+   VARIABLES
+------------------------------ */
+:root{
+  --main-red: #FF6565;
+  --max-width: 1000px;
+  --text-white: #FFFFFF;
+  --text-dark: #071629;
+  --bg: #0b1320;
+}
+
+/* ------------------------------
+   GLOBAL
+------------------------------ */
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--text-white);
+  background: var(--bg);
+  line-height: 1.45;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+.header{ padding:20px 0; }
+.header-content{ display:flex; justify-content:space-between; align-items:center; }
+.nav{ display:flex; gap:30px; }
+.nav a{ color:var(--text-white); text-decoration:none; font-weight:600; }
+.nav a:hover, .nav a:active{ color:var(--main-red); }
+.menu-icon{ display:none; }
+
+/* ------------------------------
+   HERO
+------------------------------ */
+.hero{ text-align:center; padding:80px 0 100px; }
+.hero h1{ font-size:40px; margin-bottom:16px; }
+.hero p{ font-size:16px; margin-bottom:20px; color: #e6eef8; max-width:700px; margin-left:auto; margin-right:auto; }
+.btn{ padding:12px 30px; background:var(--main-red); color:var(--text-white); border:none; border-radius:25px; cursor:pointer; font-size:15px; }
+.btn:hover, .btn:active{ opacity:0.9; }
+
+/* ------------------------------
+   GENERIC SECTION
+------------------------------ */
+.section-content{ text-align:center; padding:60px 0; }
+.section-content h2{ font-size:30px; margin-bottom:14px; color:#fff; }
+.section-description{ max-width:700px; margin:0 auto 40px; color:#dbe9f8; }
+
+/* ------------------------------
+   WHAT WE DO (kept simple)
+------------------------------ */
+.what-we-do{ background: transparent; color:var(--text-white); }
+.features{ display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.feature{ width:22%; min-width:180px; color:#e6eef8; }
+.icon{ font-size:56px; color:var(--main-red); margin-bottom:12px; display:block; }
+
+/* ------------------------------
+   OUR RESULTS - CSS PENTAGONS
+------------------------------ */
+.our-results{
+  background: transparent;
+  color: var(--text-white);
+}
+
+/* grid */
+.results-grid{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+/* result card */
+.result{
+  width:22%;
+  min-width:180px;
+  text-align:center;
+  color:#e6eef8;
+}
+
+/* pentagon shape using clip-path */
+.pentagon{
+  width:160px;
+  height:160px;
+  margin:0 auto 16px;
+  /* main fill */
+  background: linear-gradient(180deg, rgba(255,101,101,1) 0%, rgba(255,80,80,0.92) 100%);
+  /* shape */
+  -webkit-clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 18% 100%, 0% 35%);
+  clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 18% 100%, 0% 35%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* inner content centered and scaled for visual fit */
+.pentagon-inner{
+  font-size:22px;
+  font-weight:700;
+  color: #fff;
+  transform: translateY(-6px); /* nudges text slightly up to appear centered inside pentagon */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* subtle hover effect */
+.pentagon:hover{
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+}
+
+/* smaller pentagon variant for very small screens (optional) */
+.pentagon.small{ width:130px; height:130px; }
+
+/* ------------------------------
+   CONTACT & FOOTER
+------------------------------ */
+.contact{ background: transparent; color:var(--text-white); padding-bottom: 60px; }
+.contact-form{ max-width:500px; margin:20px auto 0; display:flex; flex-direction:column; gap:16px; }
+.contact-form input, .contact-form textarea{ width:100%; padding:12px; border-radius:4px; border:1px solid #2a3b4b; background:#071022; color:#dbe9f8; }
+.contact-form input:focus, .contact-form textarea:focus{ outline:none; border-color:var(--main-red); box-shadow: 0 0 8px rgba(255,101,101,0.12); }
+
+.footer{ background:#04060a; padding:36px 0 28px; color:#9fb7d0; text-align:center; }
+.footer-content{ display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.footer-logo img{ width:140px; }
+.socials{ display:flex; gap:16px; }
+.socials img{ width:28px; opacity:0.95; transition:opacity .15s; }
+.socials img:hover{ opacity:0.7; }
+.footer-copy{ margin-top:18px; font-size:13px; opacity:0.7; }
+
+/* ------------------------------
+   RESPONSIVE (≤ 480px)
+------------------------------ */
+@media (max-width:480px){
+  .menu-icon{ display:block; }
+  .nav{ display:none; }
+
+  .hero{ padding:48px 0 60px; }
+  .hero h1{ font-size:24px; }
+  .section-content{ padding:40px 0; }
+
+  .features, .results-grid{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .feature, .result{
+    width:100%;
+    max-width:300px;
+    margin-bottom:28px;
+  }
+
+  .pentagon{ width:130px; height:130px; }
+  .pentagon-inner{ font-size:18px; transform: translateY(-4px); }
+  .footer-content{ flex-direction:column; gap:12px; }
+}
