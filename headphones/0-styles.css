@@ -1,1 +1,135 @@
+/* ------------------------------
+   RESET
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------
+   VARIABLES
+------------------------------ */
+:root {
+    --main-red: #FF6565;
+    --max-width: 1000px;
+    --text-white: #FFFFFF;
+}
+
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-white);
+    background: url("images/hero_background.png") no-repeat center/cover;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+.header {
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav a:hover,
+.nav a:active {
+    color: var(--main-red);
+}
+
+/* Mobile menu icon hidden on desktop */
+.menu-icon {
+    display: none;
+}
+
+/* ------------------------------
+   HERO
+------------------------------ */
+.hero {
+    text-align: center;
+    padding: 120px 0 150px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: var(--main-red);
+    color: var(--text-white);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover,
+.btn:active {
+    opacity: 0.9;
+}
+
+.hero-small {
+    margin-top: 40px;
+    font-size: 14px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------------------------
+   RESPONSIVE MOBILE (≤ 480px)
+------------------------------ */
+@media (max-width: 480px) {
+
+    /* Show mobile menu */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide desktop nav */
+    .nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
 
